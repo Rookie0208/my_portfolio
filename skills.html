@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skill page</title>
+</head>
+<style>
+    section{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .skill_box {
+        height: 100vh;
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 24px;
+        border-radius: 8px;
+        /* gap: 12px; */
+    }
+
+    .skill_box .boxx {
+        flex: 0 0 100%;
+        padding: 30px;
+        border-radius: 8px;
+        scroll-snap-align: start;
+    }
+
+    .skill_container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5rem;
+    }
+
+    @media(max-width: 1000px) {
+        .skill_container {
+            border-radius: 0;
+        }
+    }
+
+    .skill_box {
+        transition: all 0.25s ease-in;
+        transform: translateX(0);
+    }
+
+    @media(max-width: 1000px) {
+        .skill_box {
+            height: 100vh;
+        }
+    }
+
+    .skill_box .boxx {
+        display: flex;
+        /* justify-content: space-between; */
+        /* grid-template-columns: repeat(2, 1fr); */
+        align-items: center;
+        /* overflow: hidden; */
+        position: relative;
+    }
+
+    @media(max-width: 650px) {
+        .skill_box .boxx {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+
+    .skill_box .boxx .bg {
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 40%;
+        transform: skewX(7deg);
+        position: absolute;
+        height: 90%;
+        left: 4%;
+        padding-left: 15rem;
+        transform-origin: 0 100%;
+    }
+
+    @media(max-width: 800px) {
+        .skill_box .boxx .bg {
+            width: 65%;
+        }
+    }
+
+    @media(max-width: 650px) {
+        .skill_box .boxx .bg {
+            width: 10%;
+            left: 0;
+            bottom: 0;
+            height: 54%;
+            transform: skewX(0deg);
+        }
+    }
+
+    .skill_box .boxx .bg::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: inherit;
+        pointer-events: none;
+        transform: skewX(10deg);
+    }
+
+    @media(max-width: 650px) {
+        .skill_box .boxx .bg::before {
+            width: 120%;
+            bottom: 0;
+            transform: skewX(0deg);
+        }
+    }
+
+    .skill_box .boxx .details {
+        padding: 5rem;
+        /* padding-left: 10rem; */
+        z-index: 100;
+        /* grid-column: 1/span 1; */
+        /* grid-row: 1/-1; */
+    }
+    .inner img {
+        height: 300px;
+        /* background-color: red; */
+        padding-right: 40px;
+    }
+</style>
+
+<body>
+    <section class="section5">
+        <div class="skill_container">
+            <div class="skill_box">
+                <div class="skill_box1 boxx">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1>The Sorting Visualizer</h1>
+                        <p>
+                            The sorting visualizer aimed to better understanding of some sorting algorithms.
+                            The technologies used in this projects are HTML, CSS and JS.
+                        </p>
+                        <button>Have a look</button>
+                    </div>
+                    <div class="illustration">
+                        <div class="inner"><img src="./pf/visualiser.png" alt="pic" style="height: 300px;"></div>
+                    </div>
+                </div>
+                <div class="skill_box2 boxx">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1>Word Counter</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem dignissimos
+                            molestiae, iusto repudiandae consequatur eligendi inventore ea dolor pariatur.
+                        </p>
+                        <button>check Now</button>
+                    </div>
+                    <div class="illustration">
+                        <div class="inner"><img src="./pf/wordCounter.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="skill_box3 boxx">
+                    <div class="bg"></div>
+                    <div class="details">
+                        <h1>The Number Trivia</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem dignissimos
+                            molestiae, iusto repudiandae consequatur eligendi inventore ea dolor pariatur.
+                        </p>
+                        <button>check Now</button>
+                    </div>
+                    <div class="illustration">
+                        <div class="inner"><img src="./pf/numberTrivia.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="section6"></section> -->
+</body>
+
+</html>
